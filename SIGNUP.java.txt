@@ -1,0 +1,21 @@
+package listbox;
+	 public class Listbox1{
+		 public static void main(String[]args){
+			 System.setProperty("webdriver.chrome.driver",Configurations.driverPath);
+			 WebDriver driver = new ChromeDriver();
+driver.get(Configurations.appURL);
+driver.manage().window().maximize();
+    WebElement month = driver.findElement(By.xpath("//select[@name='birthday_month']"));
+	Select sel = new Select(month);
+	
+	int len = sel.getOptions().size();
+	System.out.println(len);
+	                                                    //for (int i=0; i<=len-1; i++){
+															//String ele = sel.getOptions().get().getText();
+															//System.out.println(ele);
+	String ele = sel.getOptions().get().getText();    
+	System.out.println(ele);
+		 }
+	 }
+			 
+	 
